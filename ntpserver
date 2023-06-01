@@ -1,0 +1,33 @@
+#!/bin/bash
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#
+# Copyright (c) 2018-2022 WAGO GmbH & Co. KG
+
+
+# ntpserver
+#
+
+case $1 in
+
+    start)
+        echo "Starting NTP server..."
+        start-stop-daemon -S -x "/usr/sbin/ntpd" -o -b -- -l
+        echo "done."
+        ;;
+
+    stop)
+        echo -n "Terminating NTP server..."
+        start-stop-daemon -K -n ntpd
+        echo "done"
+        ;;
+
+      *)
+       echo "Usage: /etc/init.d/ntpserver {start|stop}"
+       exit 1
+       ;;
+esac
+
+exit 0
