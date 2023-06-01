@@ -28,7 +28,7 @@ Add a symlink in /etc/rc.d :
 ln -s /etc/init.d/ntpserver /etc/rc.d/S99_ntpserver
 ```
 
-## Disable NTP server
+## Disable the NTP server
 Disable the service
 ```shell
 /etc/init.d/ntpserver stop
