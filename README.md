@@ -9,7 +9,7 @@ To enable the NTP server on a WAGO Controller you can use the following command 
 ntpd -l
 ```
 
-You can see the NTP request by looking using the packet capture tool tcpdump 
+You can see the NTP request by using the packet capture tool tcpdump 
 ```shell
 tcpdump port 123
 ```
