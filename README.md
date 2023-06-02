@@ -38,3 +38,16 @@ Disable daemon start at bootup
 ```shell
 rm /etc/rc.d/S99_ntpserver
 ```
+##Using the package file (ipk)
+A package file is provided here to easily start the server, install the /etc/init.d/ntpserver script, and the symlink in /etc/rc.d/
+
+You can install in command line using 
+```shell
+opkg install -V3 ntpserver_v1.0.0_armhf.ipk
+```
+You can also install it using the Web Based Management and upload the file in Conofiguration / Software Upload.
+
+You can remove it in command line using 
+```shell
+opkg remove -V3 ntpserver_v1.0.0_armhf.ipk
+```
